@@ -1,0 +1,22 @@
+{
+    "name": "air-pollution-bdd",
+    "version": "1.0.0",
+    "description": "BDD Tests for air-pollution project",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "bdd_framework_build": "cd node_modules/bdd-test-framework && npm run build",
+        "bdd_build": "gulp --gulpfile node_modules/bdd-test-framework/gulpfile.js --cwd . all",
+        "webdriverupdate": "webdriver-manager update --gecko=false --standalone true",
+        "webdriverstart": "webdriver-manager start",
+        "bdd_test": "gulp --gulpfile node_modules/bdd-test-framework/gulpfile.js --cwd . createreportsfolder && protractor protractor.conf.js --baseUrl=http://localhost:3000 --cucumberOpts.tags=~@ignore"
+    },
+    "keywords": [
+        "bdd"
+    ],
+    "author": "Harry",
+    "license": "UNLICENSED",
+    "dependencies": {
+        "bdd-test-framework": "next"
+    }
+}
