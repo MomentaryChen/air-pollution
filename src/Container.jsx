@@ -6,11 +6,11 @@ import Container from '@material-ui/core/Container';
 
 export default function FixedContainer() {
   return (
-    <React.Fragment>
+    <>
       <CssBaseline />
       <Container>
-        <Typography component="div" ></Typography>
+        <Typography component="div" />
       </Container>
-    </React.Fragment>
+    </>
   );
 }

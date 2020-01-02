@@ -9,7 +9,9 @@ import Button from '@material-ui/core/Button';
 import SaveIcon from '@material-ui/icons/Save';
 
 function TabPanel(props) {
-  const { children, value, index, ...other } = props;
+  const {
+    children, value, index, ...other
+  } = props;
 
   return (
     <Typography
@@ -38,7 +40,7 @@ function a11yProps(index) {
   };
 }
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
@@ -58,8 +60,8 @@ export default function Container() {
     setValue(newValue);
   };
 
-  let width = window.innerWidth * 0.8;
-  let height = window.innerHeight * 0.8;
+  const width = window.innerWidth * 0.8;
+  const height = window.innerHeight * 0.8;
 
   return (
     <div className={classes.root}>
@@ -76,40 +78,40 @@ export default function Container() {
         <Tab label="Air Analyze" {...a11yProps(2)} />
       </Tabs>
       <TabPanel value={value} index={0}>
-        <iframe title = "1"
-                width = {width}
-                height = {height}
-                src = "https://app.powerbi.com/view?r=eyJrIjoiOTk0Mzg5OTMtZGQ0Zi00NWI4LTk4N2YtMTEyMDRhYjQzMTQyIiwidCI6IjE2Y2E3MzdkLWFhYmUtNGQ1MC1hYzU2LTE2ODQ3MDUwNzEyYyIsImMiOjEwfQ%3D%3D"
-                allowFullScreen = {
-                  true
-                }/>
+        <iframe
+          title="1"
+          width={width}
+          height={height}
+          src="https://app.powerbi.com/view?r=eyJrIjoiOTk0Mzg5OTMtZGQ0Zi00NWI4LTk4N2YtMTEyMDRhYjQzMTQyIiwidCI6IjE2Y2E3MzdkLWFhYmUtNGQ1MC1hYzU2LTE2ODQ3MDUwNzEyYyIsImMiOjEwfQ%3D%3D"
+          allowFullScreen
+        />
         <Button
-        variant="contained"
-        color="primary"
-        size="small"
-        className={classes.button}
-        startIcon={<SaveIcon />}
-      >
+          variant="contained"
+          color="primary"
+          size="small"
+          className={classes.button}
+          startIcon={<SaveIcon />}
+        >
         Save
-      </Button>
+        </Button>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <iframe title = "2"
-                width = {width}
-                height = {height}
-                src = "https://app.powerbi.com/view?r=eyJrIjoiYTI0YzE4MTUtZmU3OC00ODY1LWJmYTYtZTNlODlhMmU5YjIxIiwidCI6IjE2Y2E3MzdkLWFhYmUtNGQ1MC1hYzU2LTE2ODQ3MDUwNzEyYyIsImMiOjEwfQ%3D%3D"
-                allowFullScreen = {
-                  true
-                }/>
-        </TabPanel>
+        <iframe
+          title="2"
+          width={width}
+          height={height}
+          src="https://app.powerbi.com/view?r=eyJrIjoiYTI0YzE4MTUtZmU3OC00ODY1LWJmYTYtZTNlODlhMmU5YjIxIiwidCI6IjE2Y2E3MzdkLWFhYmUtNGQ1MC1hYzU2LTE2ODQ3MDUwNzEyYyIsImMiOjEwfQ%3D%3D"
+          allowFullScreen
+        />
+      </TabPanel>
       <TabPanel value={value} index={2}>
-        <iframe title = "3"
-              width = {width}
-              height = {height}
-              src = "https://app.powerbi.com/view?r=eyJrIjoiN2ZkNTJhMDAtOWFlZC00OWNhLWIzNTEtM2Y1NGViZDk1N2NhIiwidCI6IjE2Y2E3MzdkLWFhYmUtNGQ1MC1hYzU2LTE2ODQ3MDUwNzEyYyIsImMiOjEwfQ%3D%3D"
-              allowFullScreen = {
-                true
-              }/>
+        <iframe
+          title="3"
+          width={width}
+          height={height}
+          src="https://app.powerbi.com/view?r=eyJrIjoiN2ZkNTJhMDAtOWFlZC00OWNhLWIzNTEtM2Y1NGViZDk1N2NhIiwidCI6IjE2Y2E3MzdkLWFhYmUtNGQ1MC1hYzU2LTE2ODQ3MDUwNzEyYyIsImMiOjEwfQ%3D%3D"
+          allowFullScreen
+        />
       </TabPanel>
     </div>
   );
