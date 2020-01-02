@@ -4,7 +4,7 @@
     "description": "BDD Tests for air-pollution project",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "echo \"Error: no test specified\"",
         "bdd_framework_build": "cd node_modules/bdd-test-framework && npm run build",
         "bdd_build": "gulp --gulpfile node_modules/bdd-test-framework/gulpfile.js --cwd . all",
         "webdriverupdate": "webdriver-manager update --gecko=false --standalone true",
@@ -17,6 +17,6 @@
     "author": "Harry",
     "license": "UNLICENSED",
     "dependencies": {
-        "bdd-test-framework": "next"
+        "bdd-test-framework": "3.5.0-9"
     }
 }
