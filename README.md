@@ -1,5 +1,5 @@
-#@Pratice
-#Pratice
+#@Practice
+#Practice
 
 
 We analyze air-pollution.
